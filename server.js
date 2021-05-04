@@ -11,6 +11,10 @@ let scores = [];
 
 app.use(express.json());
 
+app.get('/', (request, response) => {
+    response.send("Working");
+});
+
 app.get('/quizzes', (request, response) => {
     response.json(quiz);
 });
