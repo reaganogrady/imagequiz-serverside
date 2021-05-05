@@ -8,7 +8,6 @@ const port = process.env.PORT || 4002;
 // data
 let scores = [];
 
-
 app.use(express.json());
 
 app.get('/', (request, response) => {
@@ -17,6 +16,10 @@ app.get('/', (request, response) => {
 
 app.get('/quizzes', (request, response) => {
     response.json(quiz);
+});
+
+app.get('/flowers', (request, response) => {
+    response.json(flowers);
 });
 
 app.get('/quiz/:id', (request, response) => {
