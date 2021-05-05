@@ -5,10 +5,13 @@ const flowers = require('./flowers');
 const app = express();
 const port = process.env.PORT || 4002;
 
+var cors = require('cors');
+
 // data
 let scores = [];
 
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (request, response) => {
     response.send("imagequiz-serverside");
