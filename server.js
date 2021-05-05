@@ -18,7 +18,7 @@ app.get('/', (request, response) => {
 });
 
 app.get('/quizzes', (request, response) => {
-    response.json(quiz);
+    response.send(quiz);
 });
 
 app.get('/flowers', (request, response) => {
